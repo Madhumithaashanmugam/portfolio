@@ -1,5 +1,6 @@
 import "./HeroSection.css";
-import {  FileText, Mail, Github, Linkedin, Globe } from "lucide-react";
+import { FileText, Mail, Linkedin, Globe } from "lucide-react";
+import madhumitha from "../../Resume/Madhumitha.pdf";
 
 const HeroSection = () => {
 
@@ -11,7 +12,12 @@ const HeroSection = () => {
   };
 
   const downloadResume = () => {
-    window.open("/resume.pdf", "_blank");
+    const link = document.createElement("a");
+    link.href = madhumitha;
+    link.download = "Madhumitha_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -67,7 +73,7 @@ const HeroSection = () => {
         <div className="hero-socials fade-in delay5">
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/madhumithashanmugam/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -77,17 +83,7 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="social-icon"
-          >
-            <Github size={20} />
-          </a>
-
-          <a
-            href="https://yourportfolio.com"
+            href="https://madhumithashanmugam.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Portfolio"
@@ -97,10 +93,6 @@ const HeroSection = () => {
           </a>
 
         </div>
-
-        {/* <div className="scroll-indicator">
-          <ArrowDown size={20} />
-        </div> */}
 
       </div>
 

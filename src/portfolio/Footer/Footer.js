@@ -1,12 +1,19 @@
 import "./Footer.css";
-import { ArrowUp, Github, Linkedin, Globe } from "lucide-react";
+import { ArrowUp, Linkedin, Globe } from "lucide-react";
 
 const Footer = () => {
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Globe, href: "#", label: "Portfolio" }
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/madhumithashanmugam/",
+      label: "LinkedIn"
+    },
+    {
+      icon: Globe,
+      href: "https://madhumithashanmugam.netlify.app/",
+      label: "Portfolio"
+    }
   ];
 
   const scrollTop = () => {
@@ -26,16 +33,22 @@ const Footer = () => {
         </p>
 
         <div className="footer-socials">
+
           {socialLinks.map(({ icon: Icon, href, label }) => (
+
             <a
               key={label}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={label}
               className="footer-icon-link"
             >
               <Icon className="footer-icon"/>
             </a>
+
           ))}
+
         </div>
 
         <button

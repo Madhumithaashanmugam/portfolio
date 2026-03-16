@@ -8,6 +8,7 @@ import ProjectsSection from './portfolio/ProjectsSection/ProjectsSection';
 import EducationSection from './portfolio/Education/Education';
 import SoftSkillsSection from './portfolio/SoftSkillsSection/SoftSkillsSection';
 import ContactSection from './portfolio/ContactSection/ContactSection';
+
 import Footer from './portfolio/Footer/Footer';
 
 function App() {
