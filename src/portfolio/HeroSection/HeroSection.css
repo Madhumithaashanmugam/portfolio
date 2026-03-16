@@ -1,0 +1,254 @@
+:root{
+--primary:#1B3C53;
+--secondary:#234C6A;
+--accent:#456882;
+--light:#D2C1B6;
+}
+
+/* SECTION */
+
+.hero-section{
+margin-top: 10vh;
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px 20px;
+overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.hero-background{
+position:absolute;
+inset:0;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+/* GLOW CIRCLES */
+
+.hero-circle{
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+animation:float 10s ease-in-out infinite;
+}
+
+.hero-circle-one{
+width:320px;
+height:320px;
+background:rgba(69,104,130,0.25);
+top:80px;
+right:80px;
+}
+
+.hero-circle-two{
+width:420px;
+height:420px;
+background:rgba(210,193,182,0.15);
+bottom:80px;
+left:80px;
+}
+
+/* CONTAINER */
+
+.hero-container{
+position:relative;
+z-index:10;
+max-width:800px;
+text-align:center;
+}
+
+/* INTRO */
+
+.hero-intro{
+font-family:monospace;
+color:white;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+/* NAME */
+
+.hero-name{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+color:var(--light);
+}
+
+.hero-name span{
+background:linear-gradient(90deg,var(--light),var(--accent));
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* TITLE */
+
+.hero-title{
+font-size:22px;
+color:var(--light);
+opacity:0.85;
+margin-bottom:10px;
+}
+
+/* DESCRIPTION */
+
+.hero-description{
+font-size:18px;
+color:var(--light);
+opacity:0.7;
+max-width:600px;
+margin:auto;
+margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+margin-bottom:35px;
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn{
+background:linear-gradient(90deg,var(--accent),var(--secondary));
+color:white;
+padding:12px 26px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-size:15px;
+transition:all .3s;
+}
+
+.primary-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* OUTLINE BUTTON */
+
+.outline-btn{
+display:flex;
+align-items:center;
+gap:8px;
+padding:12px 24px;
+border-radius:30px;
+border:1px solid var(--accent);
+background:transparent;
+color:var(--light);
+cursor:pointer;
+font-size:15px;
+transition:.3s;
+}
+
+.outline-btn:hover{
+background:var(--accent);
+color:white;
+}
+
+/* SOCIAL ICONS */
+
+.hero-socials{
+display:flex;
+justify-content:center;
+gap:18px;
+}
+
+.social-icon{
+padding:12px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,0.15);
+color:var(--light);
+transition:.3s;
+}
+
+.social-icon:hover{
+border-color:var(--accent);
+background:var(--accent);
+color:white;
+transform:translateY(-4px);
+}
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator{
+position:absolute;
+bottom:-80px;
+left:50%;
+transform:translateX(-50%);
+color:var(--light);
+opacity:0.6;
+animation:bounce 1.6s infinite;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-30px);
+}
+}
+
+/* SCROLL BOUNCE */
+
+@keyframes bounce{
+0%,100%{
+transform:translate(-50%,0);
+}
+50%{
+transform:translate(-50%,10px);
+}
+}
+
+/* FADE ANIMATION */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp .8s forwards;
+}
+
+.delay1{animation-delay:.2s}
+.delay2{animation-delay:.4s}
+.delay3{animation-delay:.6s}
+.delay4{animation-delay:.8s}
+.delay5{animation-delay:1s}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero-name{
+font-size:36px;
+}
+
+.hero-title{
+font-size:18px;
+}
+
+.hero-description{
+font-size:16px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+}

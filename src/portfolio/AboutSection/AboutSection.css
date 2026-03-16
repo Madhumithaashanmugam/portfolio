@@ -1,0 +1,169 @@
+:root{
+--primary:#1B3C53;
+--secondary:#234C6A;
+--accent:#456882;
+--light:#D2C1B6;
+}
+
+/* SECTION */
+
+.about-section{
+padding:100px 20px;
+background:var(--primary);
+overflow:hidden;
+}
+
+/* CONTAINER */
+
+.about-container{
+max-width:850px;
+margin:auto;
+}
+
+/* HEADER */
+
+.about-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:35px;
+
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+/* SHOW HEADER */
+
+.about-header.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ICON */
+
+.about-icon{
+width:24px;
+height:24px;
+color:var(--accent);
+}
+
+/* TITLE */
+
+.about-title{
+font-size:34px;
+font-weight:700;
+color:var(--light);
+}
+
+/* LINE */
+
+.about-line{
+flex:1;
+height:1px;
+background:rgba(255,255,255,0.15);
+margin-left:15px;
+}
+
+/* CARD */
+
+.about-card{
+background:var(--secondary);
+border-radius:18px;
+padding:45px;
+box-shadow:0 10px 35px rgba(0,0,0,0.4);
+
+opacity:0;
+transform:translateY(50px);
+
+transition:all .9s ease;
+}
+
+/* SHOW CARD */
+
+.about-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARD HOVER */
+
+.about-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* TEXT */
+
+.about-text{
+color:var(--light);
+opacity:.85;
+line-height:1.9;
+font-size:18px;
+}
+
+/* EXPERIENCE HIGHLIGHT */
+
+.highlight{
+font-weight:600;
+color:white;
+}
+
+/* TECH STACK */
+
+.tech{
+font-family:monospace;
+color:white;
+font-size:15px;
+margin-left:5px;
+padding:3px 8px;
+border-radius:6px;
+background:rgba(69,104,130,0.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+
+.about-container{
+max-width:750px;
+}
+
+}
+
+@media(max-width:768px){
+
+.about-section{
+padding:80px 18px;
+}
+
+.about-title{
+font-size:28px;
+}
+
+.about-card{
+padding:30px;
+}
+
+.about-text{
+font-size:16px;
+line-height:1.8;
+}
+
+}
+
+@media(max-width:480px){
+
+.about-title{
+font-size:24px;
+}
+
+.about-card{
+padding:24px;
+}
+
+.about-text{
+font-size:15px;
+}
+
+}
