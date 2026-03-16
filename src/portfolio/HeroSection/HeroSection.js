@@ -1,5 +1,5 @@
 import "./HeroSection.css";
-import { ArrowDown, FileText, Mail, Github, Linkedin, Globe } from "lucide-react";
+import {  FileText, Mail, Github, Linkedin, Globe } from "lucide-react";
 
 const HeroSection = () => {
 

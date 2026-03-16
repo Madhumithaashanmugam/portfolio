@@ -1,5 +1,5 @@
 import "./ProjectsSection.css";
-import { FolderOpen, ExternalLink } from "lucide-react";
+import { FolderOpen } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const projects = [
