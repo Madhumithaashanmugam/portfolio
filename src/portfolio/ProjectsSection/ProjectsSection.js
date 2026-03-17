@@ -1,5 +1,5 @@
 import "./ProjectsSection.css";
-import { FolderOpen } from "lucide-react";
+import { FolderOpen, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const projects = [
@@ -9,6 +9,7 @@ const projects = [
     description:
       "End-to-end legal services marketplace connecting clients with verified lawyers. Includes lawyer onboarding, job posting, appointment scheduling, and role-based dashboards.",
     tech: ["React.js", "FastAPI", "PostgreSQL", "JWT"],
+    link: "https://www.lexfactos.com/",
   },
   {
     title: "Fliplyn B2B",
@@ -16,6 +17,7 @@ const projects = [
     description:
       "Corporate cafeteria system allowing companies to provide subsidized or free meals. Includes automated wallet crediting using cron jobs and Cashfree payment integration.",
     tech: ["React.js", "FastAPI", "PostgreSQL", "Cashfree", "Cron Jobs"],
+    link: "https://customer.fliplyn.com/",
   },
   {
     title: "Fliplyn B2C",
@@ -30,6 +32,7 @@ const projects = [
     description:
       "Discovery platform helping users find caterers using location-based search. Includes caterer profiles and direct customer messaging features.",
     tech: ["React.js", "FastAPI", "PostgreSQL"],
+    link: "https://findcaterer.fliplyn.com/",
   },
   {
     title: "Fliplyn Admin Platform",
@@ -69,12 +72,10 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -89,13 +90,10 @@ const ProjectsSection = () => {
     }
 
     return () => observer.disconnect();
-
   }, []);
 
   return (
-
     <section id="projects" className="projects-section" ref={ref}>
-
       <div className="projects-container">
 
         <div className={`projects-header ${visible ? "show" : ""}`}>
@@ -105,9 +103,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="projects-grid">
-
           {projects.map((proj, index) => (
-
             <div
               key={index}
               className={`project-card ${visible ? "show" : ""}`}
@@ -115,38 +111,34 @@ const ProjectsSection = () => {
             >
 
               <h3 className="project-title">{proj.title}</h3>
-
               <p className="project-subtitle">{proj.subtitle}</p>
-
-              <p className="project-description">
-                {proj.description}
-              </p>
+              <p className="project-description">{proj.description}</p>
 
               <div className="tech-stack">
-
                 {proj.tech.map((tech, i) => (
-
                   <span key={i} className="tech-badge">
                     {tech}
                   </span>
-
                 ))}
-
               </div>
 
-              {/* <button className="project-button">
-                <ExternalLink size={14} />
-                View Project
-              </button> */}
+              {proj.link && (
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-button"
+                >
+                  <ExternalLink size={14} />
+                  View Project
+                </a>
+              )}
 
             </div>
-
           ))}
-
         </div>
 
       </div>
-
     </section>
   );
 };
