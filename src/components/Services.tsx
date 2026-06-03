@@ -9,7 +9,7 @@ export default function Services() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-8 shadow-soft sm:p-10"
+        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-6 shadow-soft sm:p-8 md:p-10"
       >
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -18,7 +18,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <motion.div
               key={service}

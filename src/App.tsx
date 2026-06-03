@@ -14,7 +14,7 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar />
       <Hero />
-      <main className="container-max mx-auto px-6 py-12 md:px-10 lg:px-12">
+      <main className="container-max mx-auto px-4 py-12 sm:px-6 md:px-10 lg:px-12">
         <About />
         <Skills />
         <Experience />

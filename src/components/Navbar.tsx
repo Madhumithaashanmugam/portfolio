@@ -11,10 +11,9 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.45, ease: 'easeOut' }}
-      className="sticky top-0 z-50 bg-[rgba(2,8,23,0.85)] backdrop-blur-md"
-      style={{ height: 80 }}
+      className="sticky top-0 z-50 h-20 bg-[rgba(2,8,23,0.85)] backdrop-blur-md"
     >
-      <div className="container-max mx-auto flex h-full items-center justify-between px-6">
+      <div className="container-max mx-auto flex h-full items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
           <span className="logo-dot" aria-hidden />
           <a href="#home" className="text-lg font-semibold text-white">

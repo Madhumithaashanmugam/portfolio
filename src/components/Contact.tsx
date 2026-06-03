@@ -19,9 +19,9 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-8 backdrop-blur-xl lg:p-12"
+        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-6 backdrop-blur-xl sm:p-8 lg:p-12"
       >
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[0.9fr_1.1fr]">
 
           {/* LEFT */}
           <div>
@@ -29,11 +29,11 @@ export default function Contact() {
               CONTACT
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold text-white">
+            <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
               Let's build something together.
             </h2>
 
-            <p className="mt-4 max-w-[450px] text-lg leading-8 text-slate-400">
+            <p className="mt-4 max-w-[450px] text-sm sm:text-base md:text-lg leading-7 text-slate-400">
               Open to full-time roles, freelance projects and collaborations.
               Feel free to reach out.
             </p>

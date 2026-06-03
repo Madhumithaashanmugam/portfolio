@@ -9,11 +9,11 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-8 shadow-soft sm:p-10"
+        className="rounded-[32px] border border-white/10 bg-slate-900/80 p-6 shadow-soft sm:p-8 md:p-10"
       >
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300">Projects</p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Featured projects</h2>
-        <div className="mt-10 grid gap-6 xl:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -28,7 +28,7 @@ export default function Projects() {
               </div> */}
 
               <div className="mt-4 flex items-center justify-between gap-4">
-                <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-white sm:text-2xl">{project.title}</h3>
                 <div className="text-xs text-slate-400">{project.tech.join(' · ')}</div>
               </div>
               <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>

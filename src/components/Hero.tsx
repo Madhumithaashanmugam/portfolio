@@ -27,7 +27,7 @@ export default function Hero() {
       {/* PURPLE GLOW */}
       <div className="absolute left-1/2 top-1/2 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6d5dfc]/20 blur-[250px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1400px] px-8 ">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="grid min-h-screen items-center gap-8 lg:grid-cols-[1.25fr_0.75fr]">
 
           {/* LEFT SIDE */}
@@ -44,11 +44,11 @@ export default function Hero() {
 
             {/* NAME */}
             <h1 className="mt-6 leading-[0.92] tracking-[-2px]">
-              <span className="block text-[64px] font-semibold text-white xl:text-[72px]">
+              <span className="block text-[36px] font-semibold text-white sm:text-[50px] md:text-[60px] lg:text-[72px] xl:text-[92px]">
                 Madhumitha
               </span>
 
-              <span className="block bg-gradient-to-r from-[#8b7cff] via-[#7c6cff] to-[#9f7aea] bg-clip-text text-[64px] font-semibold text-transparent xl:text-[72px]">
+              <span className="block bg-gradient-to-r from-[#8b7cff] via-[#7c6cff] to-[#9f7aea] bg-clip-text text-[36px] font-semibold text-transparent sm:text-[50px] md:text-[60px] lg:text-[72px] xl:text-[92px]">
                 Shanmugam
               </span>
             </h1>
@@ -67,20 +67,20 @@ export default function Hero() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex flex-col gap-4 mt-6 sm:flex-row">
 
               {/* ✅ DOWNLOAD RESUME */}
               <a
                 href={resumePDF}
                 download="Madhumitha_Shanmugam_Resume.pdf"
-                className="rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
+                className="w-full rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-1 sm:w-auto"
               >
                 Download Resume
               </a>
 
               <a
                 href="#contact"
-                className="rounded-lg glass-card px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-1"
+                className="w-full rounded-lg glass-card px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-1 sm:w-auto"
               >
                 Contact Me
               </a>
@@ -88,7 +88,7 @@ export default function Hero() {
           </motion.div>
 
           {/* RIGHT SIDE */}
-          <div className="grid grid-cols-2 gap-6 place-self-center">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 place-self-center">
             {heroStats.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -98,7 +98,7 @@ export default function Hero() {
                   duration: 0.5,
                   delay: index * 0.1,
                 }}
-                className="flex h-[210px] w-[210px] flex-col items-center justify-center rounded-[32px] border border-white/10 bg-[#081224]/90 backdrop-blur-md"
+                className="flex w-full max-w-[220px] flex-col items-center justify-center rounded-[32px] border border-white/10 bg-[#081224]/90 backdrop-blur-md px-6 py-7"
               >
                 <h3 className="text-center text-[28px] font-semibold leading-tight text-white">
                   {item.value}
